@@ -9,7 +9,22 @@ function submitForm() {
   let message = document.getElementById("message").value;
   console.log("Submitting form", name, message, email);
 
+const data = {name, message, email};
 
+fetch('/movies.json', {
+  method: 'POST', 
+  body: JSON.stringify(data),
+})
+
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch((error) => {
+    console.error('Error:', error)
+  });
+
+
+
+ 
   
 }
 (function ($) {
