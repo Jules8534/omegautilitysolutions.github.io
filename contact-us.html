@@ -77,8 +77,8 @@
                                         <input type="email" name="email" id="email" value="" placeholder="Email" />
                                     </div>
                                     <div class="col-6 col-12-medium">
-                                        <input type="checkbox" id="human" name="human" checked>
-                                        <label for="human">I am a human and not a robot</label>
+                                        <button class="g-recaptcha" data-sitekey="reCAPTCHA_site_key"
+                                            data-callback='onSubmit' data-action='submit'>Submit</button>
                                     </div>
                                     <div class="col-12">
                                         <textarea name="message" id="message" placeholder="Enter your message"
@@ -119,6 +119,13 @@
     </div>
 
     <!-- Scripts -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+        function onSubmit(token) {
+            document.getElementById("demo-form").submit();
+        }
+    </script>
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
     <script src="assets/js/jquery.dropotron.min.js"></script>
