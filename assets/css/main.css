@@ -2626,6 +2626,10 @@ input[type="radio"]+label:before {
 	overflow: hidden;
 }
 
+.logoImage {
+	margin-top: 200;
+}
+
 .image:before {
 	content: '';
 	display: block;
@@ -2637,6 +2641,7 @@ input[type="radio"]+label:before {
 	height: 100%;
 	z-index: 1;
 }
+
 
 .image img {
 	border-radius: 4px;
